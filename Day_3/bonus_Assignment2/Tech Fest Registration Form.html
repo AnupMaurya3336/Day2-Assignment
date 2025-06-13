@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Tech Fest Registration Form</h1>
+  <form action="/" method="post">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+    </div>
+
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+    </div>
+
+    <div>
+      <label for="year">Year:</label>
+      <select id="year" name="year">
+        <option value="1st">1st</option>
+        <option value="2nd">2nd</option>
+        <option value="3rd">3rd</option>
+        <option value="4th">4th</option>
+      </select>
+    </div>
+
+    <div>
+      <p>Gender:</p>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
+    </div>
+
+    <div>
+      <p>Select Events:</p>
+      <input type="checkbox" id="coding" name="event" value="coding">
+      <label for="coding">Coding</label>
+      <input type="checkbox" id="robotics" name="event" value="robotics">
+      <label for="robotics">Robotics</label>
+      <input type="checkbox" id="quiz" name="event" value="quiz">
+      <label for="quiz">Quiz</label>
+    </div>
+
+    <div>
+      <label for="comments">Additional Comments:</label><br>
+      <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+    </div>
+
+    <div>
+      <button type="submit">Register</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+</body>
+</html>
