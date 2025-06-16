@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container #myHeader {
+            color: red;
+        }
+
+        div+h3 {
+            color: green;
+        }
+
+        .myText1+.myText2 {
+            color: orange;
+        }
+
+        .myInput[type="text"],
+        input[type="email"] {
+            border: 2px solid ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="myHeader" class="redText">Hello World</h1>
+        <div class="myText2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe fugit ratione et distinctio vitae aperiam
+            magni. Molestias magnam repellendus recusandae vel voluptatibus quibusdam quod beatae numquam? Voluptatibus
+            perspiciatis ullam ipsa?
+        </div>
+        <div class="myText2">
+            <h1 id="myHeader" class="redText">Hello inside div</h1>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe fugit ratione et distinctio vitae aperiam
+            magni. Molestias magnam repellendus recusandae vel voluptatibus quibusdam quod beatae numquam? Voluptatibus
+            perspiciatis ullam ipsa?
+        </div>
+        <div class="myText2">
+            <h3>hello</h3>
+            <input type="text" name="username" id="username" class="myInput">
+            <input type="email" name="email" id="email">
+        </div>
+    </div>
+
+    <h1 class="myFooter">
+        Lorem ipsum dolor sit amet.
+    </h1>
+
+</body>
+
+</html>

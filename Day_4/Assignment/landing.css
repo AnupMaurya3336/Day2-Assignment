@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to right, lightpink, rgb(255, 213, 128));
+    display:flexbox;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    text-shadow: 2px 2px 3px gray;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 9px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(31, 214, 40);
+}

@@ -1,0 +1,16 @@
+.container #myHeader {
+    color: red;
+}
+
+div + h3 {
+    color: green;
+}
+
+.myText1 + .myText2 {
+    color: orange;
+}
+
+.myInput[type='text'],
+input[type='email'] {
+    border: 2px solid green;
+}
