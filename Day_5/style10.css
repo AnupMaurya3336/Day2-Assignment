@@ -1,0 +1,16 @@
+/* box:hover {
+background-color: #fddb3a;
+opacity: 1;
+} */
+ /* Step 1: Add transition to the .box element */
+.box {
+  transition: background-color 200ms ease-in, opacity 200ms ease-in;
+  
+  opacity: 0.7; 
+}
+
+
+.box:hover {
+  background-color: #fddb3a;
+  opacity: 1;
+}

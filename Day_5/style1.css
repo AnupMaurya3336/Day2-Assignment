@@ -1,0 +1,33 @@
+/* div.knowMoreBtn:hover {
+ background-color: darkorange;
+}
+a:visited {
+color: white;
+}
+a:active {
+color: rgb(0, 0, 0);
+}
+a:link {
+color: white;
+} */
+ /* Step 1: Hover effect for the div containing the button */
+div.knowMoreBtn:hover {
+  background-color: darkorange;
+}
+
+/* Step 2: Pseudo-classes for anchor tags */
+
+/* Style for links that have not been visited */
+a:link {
+  color: white;
+}
+
+/* Style for links that have been visited */
+a:visited {
+  color: white;
+}
+
+/* Style when the link is being clicked */
+a:active {
+  color: rgb(0, 0, 0);
+}

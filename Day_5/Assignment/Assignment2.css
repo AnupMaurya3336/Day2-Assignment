@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffefc;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #f4e2d8, #baadaf);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.product-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #f9f3f0;
+}
+
+.product-info img {
+  width: 300px;
+  border-radius: 12px;
+  margin-right: 40px;
+  transition: transform 0.3s ease;
+}
+
+.product-info img:hover {
+  transform: scale(1.05);
+}
+
+.product-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.product-info button {
+  background-color: #baadaf;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.product-info button:hover {
+  background-color: #a39297;
+}
+
+.features {
+  background: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background-color: #f4e2d8;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.testimonials {
+  padding: 60px 20px;
+  background-color: #f9f3f0;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.testimonial-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.testimonial {
+  background-color: #fff;
+  padding: 20px;
+  border-left: 5px solid #baadaf;
+  border-radius: 8px;
+  font-style: italic;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #baadaf;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+  .product-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-info img {
+    margin: 0 auto 20px auto;
+  }
+
+  .testimonial-boxes {
+    flex-direction: column;
+  }
+}

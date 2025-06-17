@@ -1,0 +1,45 @@
+/* .parent {
+ position: relative;
+background-color: #d2d2d2;
+padding: 10px;
+margin: 20px;
+width: 400px;
+height: 500px;
+}
+
+.note {
+position: absolute;
+padding: 10px;
+width: 200px;
+opacity: 0.9;
+}
+
+.task1 {
+ background-color: orange;
+top: 120px;
+left: 50px;
+}
+.task2 {
+background-color: greenyellow;
+top: 220px;
+left: 150px;
+}
+.task3 {
+background-color: royalblue;
+color: white;
+top: 360px;
+left: 80px;
+}
+
+#headline {
+position: relative;
+top: 0px;
+left: 20px;
+} */
+ .menu {
+  position: sticky;
+  top: 0px;
+  padding: 10px;
+  background-color: #e28f57;
+  z-index: 2;
+}

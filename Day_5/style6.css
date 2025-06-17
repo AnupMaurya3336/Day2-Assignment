@@ -1,0 +1,29 @@
+:root {
+ --solar-system-text: rgb(154, 84, 154);
+ --planets-text: rgb(151, 102, 10);
+ --galaxy-text-color: #000;
+ --galaxy-bg: #cb5e5e;
+ --solar-system-bg: #fbe2e5;
+ --planets-bg: #f4ca85;
+}
+
+.galaxy {
+color: var(--galaxy-text-color);
+background-color: var(--galaxy-bg);
+ padding: 20px;
+ font-family: sans-serif;
+}
+
+.solar-system {
+ color: var(--solar-system-text);
+background-color: var(--solar-system-bg);
+ padding: 10px;
+ margin-top: 20px;
+}
+
+.planets {
+ color: var(--planets-text);
+background-color: var(--planets-bg);
+ padding: 10px;
+ margin-top: 20px;
+}

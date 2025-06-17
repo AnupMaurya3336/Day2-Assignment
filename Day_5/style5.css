@@ -1,0 +1,19 @@
+.container .new::after {
+content: 'New';
+ font-size: 13px;
+color: white;
+background-color: goldenrod;
+margin-left: 10px;
+padding: 4px 12px;
+border-radius: 5px;
+}
+
+.container .trending::after {
+content: 'Trending';
+color: white;
+font-size: 13px;
+background-color: palevioletred;
+margin-left: 10px;
+padding: 4px 12px;
+border-radius: 5px;
+}
