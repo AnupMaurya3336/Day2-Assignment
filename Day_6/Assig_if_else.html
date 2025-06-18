@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let mark =prompt("Enter your marks.");
+        mark=parseInt(mark);
+        if(0>mark || mark>100){
+            console.log("invalid marks");
+            
+        }
+        else if(100>=mark && mark>=90){
+            console.log("Excellent!");
+        }
+        else if(89>=mark&& mark>=75){
+            console.log("Great job!");
+            
+        }
+        else if(60<=mark&& mark<=74){
+            console.log("Good effort.");
+            
+        }
+        else if(40<=mark&& mark<=59){
+            console.log("You passed.");
+            
+        }
+        else if(0<=mark&& mark<=39){
+            console.log("Better luck next time.");
+            
+        }
+    </script>
+</body>
+</html>
