@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment: Loops and Non-primitive Data Types</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.5; }
+    section { margin-bottom: 40px; }
+    pre { background: #f4f4f4; padding: 10px; border-left: 4px solid #333; }
+    h2 { color: #2c3e50; }
+  </style>
+</head>
+<body>
+
+  <h1>Assignment Programs</h1>
+
+  <section>
+    <h2>1. Sum of Even Numbers (0 to 100)</h2>
+    <pre id="sumEven"></pre>
+  </section>
+
+  <section>
+    <h2>2. Multiplication Table Generator</h2>
+    <input type="number" id="tableInput" placeholder="Enter a number" />
+    <button onclick="generateTable()">Generate</button>
+    <pre id="multiplicationTable"></pre>
+  </section>
+
+  <section>
+    <h2>3. Pattern Printing</h2>
+    <pre id="pattern"></pre>
+  </section>
+
+  <section>
+    <h2>4. Input Validation</h2>
+    <button onclick="validateInput()">Enter Number (1 to 10)</button>
+    <p id="validInputResult"></p>
+  </section>
+
+  <section>
+    <h2>5. Reverse an Array</h2>
+    <pre id="reversedArray"></pre>
+  </section>
+
+  <section>
+    <h2>6. Frequency Counter</h2>
+    <pre id="frequencyCount"></pre>
+  </section>
+
+  <section>
+    <h2>7. Sum of Positive Numbers</h2>
+    <pre id="sumPositive"></pre>
+  </section>
+
+  <section>
+    <h2>8. Student Record System</h2>
+    <pre id="studentInfo"></pre>
+  </section>
+
+  <section>
+    <h2>9. Library System</h2>
+    <pre id="libraryDisplay"></pre>
+  </section>
+
+  <script>
+    // 1. Sum of Even Numbers (0 to 100)
+    let sum = 0;
+    for (let i = 0; i <= 100; i += 2) sum += i;
+    document.getElementById("sumEven").textContent = "Sum: " + sum;
+
+    // 2. Multiplication Table Generator
+    function generateTable() {
+      const num = document.getElementById("tableInput").value;
+      let result = '';
+      for (let i = 1; i <= 10; i++) {
+        result += `${num} x ${i} = ${num * i}\n`;
+      }
+      document.getElementById("multiplicationTable").textContent = result;
+    }
+
+    // 3. Pattern Printing
+    let pattern = '';
+    for (let i = 1; i <= 5; i++) pattern += '*'.repeat(i) + '\n';
+    document.getElementById("pattern").textContent = pattern;
+
+    // 4. Input Validation
+    function validateInput() {
+      let number;
+      do {
+        number = prompt("Enter a number between 1 and 10:");
+      } while (number < 1 || number > 10);
+      document.getElementById("validInputResult").textContent = "You entered: " + number;
+    }
+
+    // 5. Reverse an Array
+    const arr1 = [1, 2, 3, 4, 5];
+    const reversed = [...arr1].reverse();
+    document.getElementById("reversedArray").textContent = `Original: [${arr1}]\nReversed: [${reversed}]`;
+
+    // 6. Frequency Counter
+    const arr2 = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4];
+    const freq = {};
+    arr2.forEach(num => freq[num] = (freq[num] || 0) + 1);
+    let freqOutput = "Frequencies:\n";
+    for (let key in freq) freqOutput += `${key}: ${freq[key]}\n`;
+    document.getElementById("frequencyCount").textContent = freqOutput;
+
+    // 7. Sum of Positive Numbers
+    const arr3 = [-1, 5, -3, 8, 0, -2, 6];
+    const sumPos = arr3.reduce((sum, val) => val > 0 ? sum + val : sum, 0);
+    document.getElementById("sumPositive").textContent = `Array: [${arr3}]\nSum of positive numbers: ${sumPos}`;
+
+    // 8. Student Record System
+    const student = {
+      name: "Anup",
+      age: 20,
+      grade: "B",
+      subjects: ["Math", "Science"],
+      addSubject(subject) {
+        this.subjects.push(subject);
+      },
+      updateGrade(newGrade) {
+        this.grade = newGrade;
+      },
+      display() {
+        return `Name: ${this.name}\nAge: ${this.age}\nGrade: ${this.grade}\nSubjects: ${this.subjects.join(', ')}`;
+      }
+    };
+    student.addSubject("English");
+    student.updateGrade("A");
+    document.getElementById("studentInfo").textContent = student.display();
+
+    // 9. Library System
+    const library = [
+      { title: "Book A", author: "Author A", year: 2020, available: true },
+      { title: "Book B", author: "Author B", year: 2019, available: true },
+      { title: "Book C", author: "Author C", year: 2021, available: false }
+    ];
+
+    function displayAvailableBooks() {
+      return library.filter(book => book.available).map(book => `${book.title} by ${book.author}`).join('\n');
+    }
+
+    function borrowBook(title) {
+      const book = library.find(b => b.title === title);
+      if (book) book.available = false;
+    }
+
+    function addBook(book) {
+      library.push(book);
+    }
+
+    borrowBook("Book A");
+    addBook({ title: "Book D", author: "Author D", year: 2022, available: true });
+
+    document.getElementById("libraryDisplay").textContent = `Available Books:\n${displayAvailableBooks()}`;
+  </script>
+
+</body>
+</html>
