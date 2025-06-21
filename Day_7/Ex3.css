@@ -1,0 +1,19 @@
+.container {
+    background-color: #e2e2e2;
+    padding: 10px;
+    height: 100vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    
+}
+.item {
+    background-color: tomato;
+    padding: 5px;
+    color: white;
+}
+.item img {
+ width: 100%;
+ height: auto;
+}

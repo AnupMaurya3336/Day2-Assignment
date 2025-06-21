@@ -1,0 +1,52 @@
+.container {
+    background-color: #e2e2e2;
+    padding: 10px;
+    display: grid;
+    height: 100vw;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px 10px;
+    grid-template-areas:"header header header header"
+"sidebar content content content"
+"footer footer footer footer";
+    
+}
+.item {
+    background-color: tomato;
+    padding: 5px;
+    color: white;
+}
+
+.item-1 {
+ grid-area: header;
+
+}
+.item-2 {
+ grid-area: content;
+}
+
+.item-3 {
+ grid-area: sidebar;
+}
+
+.item-4 {
+ grid-area: footer;
+}
+
+.item-2 {
+ grid-area: content;
+background-image: url('./images/gta5.jpeg');
+ background-size: contain;
+}
+
+.item-3 {
+ grid-area: sidebar;
+background-image: url('./images/pubg.jpeg');
+ background-size: cover;
+}
+
+.item-4 {
+ grid-area: footer;
+background-image: url('./images/cod.jpeg');
+ background-size: cover;
+}

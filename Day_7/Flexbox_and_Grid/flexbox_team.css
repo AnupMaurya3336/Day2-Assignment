@@ -1,0 +1,64 @@
+/* General Reset & Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Flexbox - Team Section */
+.team-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  gap: 20px;
+}
+
+.team-card {
+  width: 220px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background-color: white;
+  box-sizing: border-box;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  border-radius: 8px;
+}
+
+.team-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.team-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.job-title {
+  color: #777;
+  font-style: italic;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /*4 columns */
+  grid-template-rows: repeat(2, 1fr);    /*2 rows */
+  gap: 10px;
+  width: 900px;
+  justify-items: center;
+  margin-top: 60px;
+}
+
+
+.gallery-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,20 @@
+.container {
+    background-color: #e2e2e2;
+    padding: 10px;
+    height: 100vh;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.item {
+    background-color: tomato;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    padding: 5px;
+    color: white;
+}
+
+/* write your css here */
