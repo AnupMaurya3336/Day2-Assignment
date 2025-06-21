@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment: Functions & Callbacks</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h2 { color: #2c3e50; }
+    pre { background: #f0f0f0; padding: 10px; border-left: 4px solid #2c3e50; }
+    button { margin-top: 5px; }
+  </style>
+</head>
+<body>
+
+  <h1>Functions & Callback Assignment</h1>
+
+  <section>
+    <h2>1. Digital Alarm Assistant</h2>
+    <button onclick="setAlarm('14:00', 'Time to study!')">Set Alarm for 2:00 PM</button>
+  </section>
+
+  <section>
+    <h2>2. TAX Calculator</h2>
+    <pre id="taxCalc"></pre>
+  </section>
+
+  <section>
+    <h2>3. Recursive Countdown Timer</h2>
+    <button onclick="startCountdown()">Start Countdown from 5</button>
+    <pre id="countdownOutput"></pre>
+  </section>
+
+  <section>
+    <h2>4. Even Number Checker (without %)</h2>
+    <pre id="evenCheck"></pre>
+  </section>
+
+  <section>
+    <h2>5. Basic Calculator with Callback</h2>
+    <pre id="callbackCalc"></pre>
+  </section>
+
+  <section>
+    <h2>6. Book Search Simulator</h2>
+    <button onclick="searchBook('JavaScript Mastery', function(result) {
+      document.getElementById('bookResult').textContent = result;
+    })">Search for Book</button>
+    <pre id="bookResult"></pre>
+  </section>
+
+  <script>
+    // 1. Digital Alarm Assistant
+    function setAlarm(time, message) {
+      const now = new Date();
+      const [hours, minutes] = time.split(":").map(Number);
+      const alarmTime = new Date();
+      alarmTime.setHours(hours, minutes, 0, 0);
+      const timeDiff = alarmTime.getTime() - now.getTime();
+
+      if (timeDiff > 0) {
+        setTimeout(() => {
+          alert("ALARM: " + message);
+        }, timeDiff);
+        console.log("Alarm set for " + time);
+      } else {
+        alert("That time has already passed!");
+      }
+    }
+
+    // 2. TAX Calculator
+    function calculateTax(amount, ...taxPercentages) {
+      let totalTax = taxPercentages.reduce((sum, tax) => sum + tax, 0);
+      const afterTax = amount + (amount * totalTax / 100);
+      return afterTax.toFixed(2);
+    }
+    document.getElementById("taxCalc").textContent =
+      "After Tax: ₹" + calculateTax(1000, 12, 18);
+
+    // 3. Recursive Countdown Timer
+    function countdown(n, element) {
+      if (n === 0) {
+        element.textContent += "Blast Off!";
+        return;
+      }
+      element.textContent += n + "\n";
+      setTimeout(() => countdown(n - 1, element), 1000);
+    }
+    function startCountdown() {
+      const output = document.getElementById("countdownOutput");
+      output.textContent = '';
+      countdown(5, output);
+    }
+
+    // 4. Even Number Checker (Recursive without %)
+    function isEven(n) {
+      if (n === 0) return true;
+      if (n === 1) return false;
+      return isEven(n - 2);
+    }
+    const evenStatus = isEven(6) ? "Even" : "Odd";
+    document.getElementById("evenCheck").textContent = "6 is " + evenStatus;
+
+    // 5. Basic Calculator with Callback
+    function calculate(a, b, operation) {
+      return operation(a, b);
+    }
+    function add(x, y) { return x + y; }
+    function multiply(x, y) { return x * y; }
+
+    const addResult = calculate(4, 5, add);
+    const multiplyResult = calculate(4, 5, multiply);
+    document.getElementById("callbackCalc").textContent =
+      `Addition: ${addResult}\nMultiplication: ${multiplyResult}`;
+
+    // 6. Book Search Simulator
+    function searchBook(bookName, callback) {
+      setTimeout(() => {
+        callback(`Book "${bookName}" found!`);
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>
