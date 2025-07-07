@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2 - Update All Children</title>
+</head>
+
+<body>
+    <div id="features">
+        <p>Fast performance</p>
+        <p>Lightweight</p>
+        <p>Responsive design</p>
+    </div>
+
+
+    
+    <script>
+        const featuresDiv = document.getElementById("features");
+        const paragraphs = featuresDiv.querySelectorAll("p");
+
+        paragraphs.forEach(p => {
+            p.textContent = "✓ " + p.textContent;
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3 - Leaderboard</title>
+</head>
+
+<body>
+    <h2>Leaderboard</h2>
+    <ol id="leaderboard"></ol>
+
+
+    <script>
+        const names = ["Anup", "Harshit", "Ritik", "Satyam"];
+        const ol = document.getElementById("leaderboard");
+
+        names.forEach(name => {
+            const li = document.createElement("li");
+            li.textContent = name;
+            ol.appendChild(li);
+        });
+
+
+    </script>
+</body>
+
+</html>

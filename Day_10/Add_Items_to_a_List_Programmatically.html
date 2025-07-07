@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4 - Add Items</title>
+</head>
+
+<body>
+    <h2>Shopping List</h2>
+    <ul id="shopping-list"></ul>
+    <script>
+        const shoppingList = document.getElementById("shopping-list");
+        const items = ["Item A", "Item B", "Item C"];
+
+        items.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = item;
+            shoppingList.appendChild(li);
+        });
+
+
+    </script>
+</body>
+
+</html>

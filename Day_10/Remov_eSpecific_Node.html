@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1 - Remove Specific Node</title>
+</head>
+
+<body>
+    <h2>My List</h2>
+    <ul id="myList">
+        <li>First Item</li>
+        <li>Second Item</li> <!--isko remove kiya hai -->
+        <li>Third Item</li>
+    </ul>
+
+
+    
+    <script>
+        const list = document.getElementById("myList");
+        const secondItem = list.children[1];
+        list.removeChild(secondItem);
+
+
+    </script>
+</body>
+
+</html>

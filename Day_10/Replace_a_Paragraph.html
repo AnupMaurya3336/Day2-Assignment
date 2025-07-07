@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task 5 - Replace Paragraph</title>
+</head>
+
+<body>
+    <p id="old-paragraph">This paragraph will be replaced.</p>
+    <script>
+        const oldPara = document.getElementById("old-paragraph");
+        const newPara = document.createElement("p");
+        newPara.textContent = "This paragraph was replaced!";
+
+        oldPara.parentNode.replaceChild(newPara, oldPara);
+
+    </script>
+</body>
+
+</html>
