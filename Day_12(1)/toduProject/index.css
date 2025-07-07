@@ -1,0 +1,78 @@
+body {
+  background-color: #f3dede;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: #6b4c3b;
+  margin: 40px auto;
+  padding: 20px;
+  width: 600px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.container h1 {
+  color: #fff;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 70%;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  margin-left: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.status-pending {
+  color: red;
+  font-weight: bold;
+}
+
+.status-completed {
+  color: green;
+  font-weight: bold;
+}
+
+.update-btn, .delete-btn {
+  cursor: pointer;
+  font-size: 18px;
+  border: none;
+  background: none;
+}
+
+.delete-btn {
+  color: white;
+  background-color: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
